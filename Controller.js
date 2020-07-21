@@ -13,12 +13,10 @@ export class Controller{
 	inBlockLevel = 0;
 	outBlockLevel = 1;
 	view;
+	externalSend;
 	
-	constructor(serverURL, SVGElement){
-		this.ws = new WebSocket(serverURL);
-		this.ws.binaryType = "blob";
-		this.ws.onopen = this.onopen.bind(this);
-		this.ws.onmessage = this.onmessage.bind(this);
+	constructor(externalSend, SVGElement){
+		this.externalSend = externalSend;
 		this.view = new View(this, SVGElement);
 	}
 	
@@ -31,8 +29,8 @@ export class Controller{
 		this.sendMessages();
 	}
 	
-	onmessage(evt){
-		this.inQueue.push(JSON.parse(evt.data));
+	onmessage(message){
+		this.inQueue.push(message);
 		this.handleMessages();
 	}
 	handleMessages(){
@@ -163,6 +161,6 @@ export class Controller{
 	sendMessage(){
 		let message = this.outQueue.shift();
 		console.log(message);
-		this.ws.send(JSON.stringify(message));
+		externalSend(message);
 	}
 }
