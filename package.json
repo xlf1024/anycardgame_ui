@@ -28,5 +28,6 @@
   },
   "browserslist": [
     "last 1 Firefox versions"
-  ]
+  ],
+  "source":true
 }

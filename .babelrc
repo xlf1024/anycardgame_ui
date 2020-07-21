@@ -1,0 +1,7 @@
+{
+	"plugins":[
+		["@babel/plugin-proposal-class-properties",{},"additional to parcel"],
+		["@babel/plugin-proposal-private-methods",{},"additional to parcel"],
+		["@babel/plugin-proposal-optional-chaining",{},"additional to parcel"]
+	]
+}
