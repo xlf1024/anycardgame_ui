@@ -151,6 +151,6 @@ export class Controller{
 	sendMessage(){
 		let message = this.outQueue.shift();
 		console.log(message);
-		externalSend(message);
+		this.externalSend(message);
 	}
 }
