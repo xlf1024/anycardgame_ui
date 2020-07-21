@@ -17,7 +17,7 @@ export class View{
 	
 	constructor(controller, container){
 		this.#controller = controller;
-		this.#container = container;
+		this.#container = container.querySelector(".CardsContainer");
 		
 		this.#container.setAttribute("class", "CardsContainer");
 		
@@ -31,9 +31,9 @@ export class View{
 		
 		this.#UIBg = container.querySelector(".UIBg");
 		
-		this.#stackPreviewContainer = document.querySelector(".StackPreviewContainer");
+		this.#stackPreviewContainer = container.querySelector(".StackPreviewContainer");
 		
-		this.#notificationBox = document.querySelector(".Notifications");
+		this.#notificationBox = container.querySelector(".Notifications");
 		
 		this.#interactor = new SVGInteractor(this.#mainLayer, this.#applyPosition.bind(this), {"pan":true, "rotate":true, "scale":true});
 		this.#interactor.scale = 1;

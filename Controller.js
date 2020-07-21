@@ -11,24 +11,14 @@ export class Controller{
 	inQueue = [];
 	outQueue = [];
 	inBlockLevel = 0;
-	outBlockLevel = 1;
+	outBlockLevel = 0;
 	view;
 	externalSend;
 	
-	constructor(externalSend, SVGElement){
+	constructor(externalSend, ContainerElement){
 		this.externalSend = externalSend;
-		this.view = new View(this, SVGElement);
+		this.view = new View(this, ContainerElement);
 	}
-	
-	onopen(){
-		console.log("open");
-		this.outBlockLevel--;
-		this.send({
-			"action":"resync"
-		});
-		this.sendMessages();
-	}
-	
 	onmessage(message){
 		this.inQueue.push(message);
 		this.handleMessages();
