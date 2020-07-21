@@ -1,7 +1,7 @@
 {
-  "name": "anycardgame_serverbased",
+  "name": "anycardgame_ui",
   "version": "0.0.0",
-  "description": "Game-agnostic online card game table. Cards not included.",
+  "description": "Ui component for the anycardgame project",
   "main": "\"\"",
   "type": "module",
   "scripts": {
