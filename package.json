@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@egjs/hammerjs": "git+https://github.com/xlf1024/hammer.js.git",
-    "jszip": "^3.5.0",
+    "jszip": "^3.7.0",
     "papaparse": "^5.2.0"
   },
   "browserslist": [
