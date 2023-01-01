@@ -19,7 +19,7 @@
   "homepage": "https://github.com/xlf1024/anycardgame_ui#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
-    "parcel": "^1.12.4"
+    "parcel": "^2.8.2"
   },
   "dependencies": {
     "@egjs/hammerjs": "git+https://github.com/xlf1024/hammer.js.git",
